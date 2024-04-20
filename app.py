@@ -3,7 +3,7 @@
 """
 Created on Tue May 16 08:55:44 2023
 
-@author: Usman Olaleye
+@author: Usman Adeleye
 """
 
 import numpy as np
@@ -29,10 +29,10 @@ def predict_fraud(V4, V8, V10, V13, V14, V16, V21, V22, V23, V27):
 
 
 def main():
-    st.title("Credit Card Fraud Detection System")
+    st.title("Network Intrusion Detection System")
     html_temp = """
     <div style="background-color:green;padding:10px">
-    <h2 style="color:white;text-align:center;">Portia's Credit Card Fraud Detection ML App</h2>
+    <h2 style="color:white;text-align:center;">Usman's Network Intrusion Detection ML App</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
