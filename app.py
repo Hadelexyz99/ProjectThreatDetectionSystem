@@ -9,6 +9,7 @@ Created on Sat 27 Apr 08:55:44 2024
 import numpy as np
 import pickle
 import streamlit as st
+import altair as alt
 from tensorflow.keras.models import load_model
 
 classifier = load_model('model.h5')
