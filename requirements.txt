@@ -1,6 +1,6 @@
 streamlit==1.33.0
 numpy==1.26.3
 pandas==2.1.4
-altair==5.3.3
+altair==4.1.0
 keras==3.3.3
 tensorflow==2.16.1
