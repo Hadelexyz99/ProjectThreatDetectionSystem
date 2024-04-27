@@ -11,7 +11,7 @@ import pickle
 import streamlit as st
 
 from tensorflow.keras.models import load_model
-classifier = load_model('classifier1.pkl')
+classifier = load_model('model.h5')
 
 # pickle_in = open("classifier.pkl", "rb")
 # classifier = pickle.load(pickle_in)
