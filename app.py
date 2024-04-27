@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Created on Tue May 16 08:55:44 2023
+Created on Sat 27 Apr 08:55:44 2024
 
 @author: Usman Adeleye
 """
@@ -11,7 +11,7 @@ import pickle
 import streamlit as st
 
 from tensorflow.keras.models import load_model
-classifier = load_model('model.h5')
+classifier = load_model('classifier1.pkl')
 
 # pickle_in = open("classifier.pkl", "rb")
 # classifier = pickle.load(pickle_in)
@@ -23,8 +23,8 @@ def welcome():
 
 
 # @app.route('/predict',methods=["Get"])
-def predict_fraud(V4, V8, V10, V13, V14, V16, V21, V22, V23, V27):
-    prediction = classifier.predict([[V4, V8, V10, V13, V14, V16, V21, V22, V23, V27]])
+def predict_threat(ts,uid,orig_h,orig_p,resp_h,resp_p,conn_state,history,orig_pkts,orig_ip_bytes,resp_pkts,resp_ip_bytes,PartOfAHorizontalPortScan,n,tcp,udp):
+    prediction = classifier.predict([[ts,uid,orig_h,orig_p,resp_h,resp_p,conn_state,history,orig_pkts,orig_ip_bytes,resp_pkts,resp_ip_bytes,PartOfAHorizontalPortScan,n,tcp,udp]])
     return prediction
 
 
