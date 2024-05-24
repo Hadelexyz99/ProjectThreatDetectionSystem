@@ -39,22 +39,22 @@ def main():
 
     # Collect user inputs
     st.sidebar.title("Input Parameters")
-    ts = st.sidebar.number_input("Timestamp", min_value=-3, max_value=3, step=1)
-    uid = st.sidebar.number_input("Unique Identifier", min_value=-3, max_value=3, step=1)
-    orig_h = st.sidebar.number_input("Source IP", min_value=-3, max_value=3, step=1)
-    orig_p = st.sidebar.number_input("Source Port", min_value=-3, max_value=3, step=1)
-    resp_h = st.sidebar.number_input("Destination IP", min_value=-3, max_value=3, step=1)
-    resp_p = st.sidebar.number_input("Destination Port", min_value=-3, max_value=3, step=1)
-    conn_state = st.sidebar.number_input("Connection State", min_value=-3, max_value=3, step=1)
-    history = st.sidebar.number_input("History", min_value=-3, max_value=3, step=1)
-    orig_pkts = st.sidebar.number_input("Packets from Destination to Port", min_value=-3, max_value=3, step=1)
-    orig_ip_bytes = st.sidebar.number_input("Bytes from Source to Destination", min_value=-3, max_value=3, step=1)
-    resp_pkts = st.sidebar.number_input("Packets from Destination to Source", min_value=-3, max_value=3, step=1)
-    resp_ip_bytes = st.sidebar.number_input("Bytes from Destination to Source", min_value=-3, max_value=3, step=1)
-    PartOfAHorizontalPortScan = st.sidebar.number_input("Horizontal Port Scan", min_value=-3, max_value=3, step=1)
-    tcp = st.sidebar.number_input("TCP", min_value=-3, max_value=3, step=1)
-    udp = st.sidebar.number_input("UDP", min_value=-3, max_value=3, step=1)
-    n = st.sidebar.number_input("Not Horizontal Port Scan", min_value=-3, max_value=3, step=1)
+    ts = st.sidebar.number_input("Timestamp", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    uid = st.sidebar.number_input("Unique Identifier", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    orig_h = st.sidebar.number_input("Source IP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    orig_p = st.sidebar.number_input("Source Port", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    resp_h = st.sidebar.number_input("Destination IP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    resp_p = st.sidebar.number_input("Destination Port", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    conn_state = st.sidebar.number_input("Connection State", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    history = st.sidebar.number_input("History", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    orig_pkts = st.sidebar.number_input("Packets from Destination to Port", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    orig_ip_bytes = st.sidebar.number_input("Bytes from Source to Destination", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    resp_pkts = st.sidebar.number_input("Packets from Destination to Source", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    resp_ip_bytes = st.sidebar.number_input("Bytes from Destination to Source", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    PartOfAHorizontalPortScan = st.sidebar.number_input("Horizontal Port Scan", min_value=-3, max_value=3, step=1e-6, format="%.5f"
+    tcp = st.sidebar.number_input("TCP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    udp = st.sidebar.number_input("UDP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
+    n = st.sidebar.number_input("Not Horizontal Port Scan", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     
     # Code for Prediction
     if st.sidebar.button("Predict Threat"):
