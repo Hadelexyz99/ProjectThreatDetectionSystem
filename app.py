@@ -51,7 +51,7 @@ def main():
     orig_ip_bytes = st.sidebar.number_input("Bytes from Source to Destination", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     resp_pkts = st.sidebar.number_input("Packets from Destination to Source", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     resp_ip_bytes = st.sidebar.number_input("Bytes from Destination to Source", min_value=-3, max_value=3, step=1e-6, format="%.5f")
-    PartOfAHorizontalPortScan = st.sidebar.number_input("Horizontal Port Scan", min_value=-3, max_value=3, step=1e-6, format="%.5f"
+    PartOfAHorizontalPortScan = st.sidebar.number_input("Horizontal Port Scan", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     tcp = st.sidebar.number_input("TCP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     udp = st.sidebar.number_input("UDP", min_value=-3, max_value=3, step=1e-6, format="%.5f")
     n = st.sidebar.number_input("Not Horizontal Port Scan", min_value=-3, max_value=3, step=1e-6, format="%.5f")
